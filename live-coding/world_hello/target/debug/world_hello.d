@@ -1,1 +1,0 @@
-/Users/yuanliling/Documents/rust/world_hello/target/debug/world_hello: /Users/yuanliling/Documents/rust/world_hello/src/main.rs /Users/yuanliling/Documents/rust/world_hello/src/priority_self.rs /Users/yuanliling/Documents/rust/world_hello/src/random_self.rs /Users/yuanliling/Documents/rust/world_hello/src/types.rs /Users/yuanliling/Documents/rust/world_hello/src/value_tour.rs
