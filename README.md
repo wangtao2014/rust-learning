@@ -79,3 +79,6 @@
 - String 创建方法
     - ![avatar](string-new.png)
     - ![avatar](string-update.png)
+
+- ![avatar](hashmap&borrow.png)
+- ![avatar](hashmap_update.png)

@@ -1,6 +1,7 @@
 mod back_of_house;
 mod vec_test;
 mod string_test;
+mod map_test;
 
 pub fn eat_at_restaurant() {
     let mut meal = back_of_house::hosting::Breakfast::summer("Rye");
@@ -20,6 +21,17 @@ pub fn string_test_another() {
     string_test::string_iter();
 }
 
+pub fn map_test_another() {
+    map_test::map_new();
+    map_test::map_collect();
+    map_test::map_borrow();
+    map_test::map_obtain();
+    map_test::map_iter();
+    map_test::map_update();
+    map_test::map_entry();
+    map_test::map_entry_update();
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -29,5 +41,6 @@ mod tests {
         eat_at_restaurant();
         vec_test_another();
         string_test_another();
+        map_test_another();
     }
 }
