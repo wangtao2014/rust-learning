@@ -1,0 +1,14 @@
+[workspace]
+
+members = [
+    
+    #live coding
+    "live-coding/chat-app",
+    "live-coding/training-code",
+    "live-coding/variables",
+    "live-coding/world_hello",
+    "live-coding/adder",
+    "live-coding/life-time",
+    "live-coding/guessing_game",
+    "live-coding/my-project",
+]
