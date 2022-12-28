@@ -149,6 +149,10 @@ name = "chapter-09-error"
 version = "0.1.0"
 
 [[package]]
+name = "chapter-10-trait-lifetime"
+version = "0.1.0"
+
+[[package]]
 name = "chat-app"
 version = "0.1.0"
 dependencies = [

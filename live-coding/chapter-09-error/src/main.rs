@@ -82,7 +82,7 @@ fn read_username_from_file_another2() -> Result<String, Error> {
 // ? 运算符只能用于返回 Result 的函数
 // the `?` operator can only be used in a function that returns `Result` or `Option`
 fn open_file_error() -> Result<(), Box<dyn std::error::Error>>{
-    let file = File::open("hello.txt")?;
+    let _file = File::open("hello.txt")?;
     Ok(())
 }
 
@@ -94,4 +94,5 @@ fn main() {
     // load_file_unwrap();
     let _result = read_username_from_file();
     let _result1 = read_username_from_file_another();
+    open_file_error();
 }

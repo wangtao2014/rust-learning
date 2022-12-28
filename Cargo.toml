@@ -12,4 +12,5 @@ members = [
     "live-coding/guessing_game",
     "live-coding/my-project",
     "live-coding/chapter-09-error",
+    "live-coding/chapter-10-trait-lifetime",
 ]
