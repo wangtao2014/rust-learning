@@ -13,4 +13,5 @@ members = [
     "live-coding/my-project",
     "live-coding/chapter-09-error",
     "live-coding/chapter-10-trait-lifetime",
+    "live-coding/chapter-11-test",
 ]
