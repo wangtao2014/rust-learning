@@ -1,3 +1,9 @@
+use chapter_10_trait_lifetime::Summary;
+use chapter_10_trait_lifetime::NewsArticle;
+use chapter_10_trait_lifetime::Tweet;
+use chapter_10_trait_lifetime::notify;
+use chapter_10_trait_lifetime::notify1;
+
 fn largest(list: &[i32]) -> i32 {
     let mut largest_num = list[0];
     for &item in list {
@@ -42,6 +48,28 @@ impl<T, U> Pointx<T, U> {
     }
 }
 
+pub fn tweet_summary() {
+    let tweet = Tweet {
+        username: "tweet".to_string(),
+        content: "content".to_string(),
+        reply: true,
+        retweet: false,
+    };
+    println!("tweet: {}", tweet.summarize());
+    // notify(tweet);
+    notify1(tweet);
+}
+
+pub fn newarticle_summary() {
+    let news = NewsArticle {
+        headline: "headline".to_string(),
+        location: "location".to_string(),
+        author: "author".into(),
+        content: "content".into(),
+    };
+    println!("news: {}", news.summarize());
+}
+
 fn main() {
     let number_list = vec![10, 20 , 30, 40, 50];
     let largest_number = largest(&number_list);
@@ -58,4 +86,8 @@ fn main() {
     let point3 = point1.mixup(point2);
 
     println!("point3.x = {}, point3.y = {}", point3.x, point3.y);
+
+    tweet_summary();
+    newarticle_summary();
+    
 }

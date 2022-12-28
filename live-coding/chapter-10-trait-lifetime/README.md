@@ -30,3 +30,29 @@
         - 在编译时将泛型替换为具体的类型的过程
 
 # Trait
+- 某种类型具有哪些并且可以和其他类型共享的功能
+    - 抽象的定义共享行为
+
+- trait bound（约束）：泛型类型参数指定为实现了特定行为的类型
+    - ![avatar](trait_bound.png)
+    - 默认实现 在 trait 中实现方法，具体类型中不实现
+    - 默认实现的方法中可以调用trait中其他的方法，即使这个方法没有默认实现
+    - 注意：无法从方法的重写实现中调用默认的实现(与实际不符合)
+
+- Trait 作为参数
+    - impl trait 适用于简单情况 
+        - pub fn notify(item: impl Summary)
+    - trait bound 适用于复杂情况
+        - pub fn notify1<T: Summary>(item: T)
+    - 使用 + 指定多个 bound
+        - pub fn notify(item: impl Summary + Display)
+        - pub fn notify1<T: Summary + Display>(item: T)
+    - 使用 where 子句
+        - where T: Summary + Display, U: Clone + Display,
+
+- trait 作为返回类型
+    - pub fn notify(item: &str) -> impl Summary { }
+    - impl trait 只能返回确定的同一种类型
+
+- trait 注意：
+    -![avatar](trait.png)
